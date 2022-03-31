@@ -1,18 +1,8 @@
 <html>
-    <head>
-        <style>
-        body {
-          background-image: url('https://thumbs.dreamstime.com/b/natural-grey-marble-texture-design-white-grey-marble-white-marble-grey-onyx-marble-texture-natural-stone-pattern-abstract-189062433.jpg');
-          background-repeat: no-repeat;
-          background-attachment: fixed; 
-          background-size: 100% 100%;
-        }
-        </style>
-    </head>
     <body>
         <h1 style="background-color:LightGray;">Hello Welcome </h1>
         <h1 style="background-color:LightGray;">This is TFY webpage, </h1>
-        <p>Recently, I have attended a master course relating to Data management, AI and analytic. 
+        <p>Recently, I have attended a master course relating to Data Science, AI and analytic. 
             It is very interesting to learn AI Machine Learning can analyze and build a predictive modeling. 
             Predictive modeling is a statistical technique using machine learning and data mining to predict and forecast likely future outcomes with the aid of historical and existing data.
             
@@ -23,22 +13,22 @@
         <h2 h1 style="background-color:LightGray;">Data:</h2>
         <p>Data input: Is more Data always better for building a models?</p>
         <p>By rule of thumb and for most analysts, yes, more data leads to more predictive power and better accurate analysis. 
-            For sophisticated models such as gradient boosted trees and random forests, sufficient quantity and good quality of data and feature engineering reduce the errors drastically. But in this project, due to time constraint, only 245 samples (1 year of stock price) entered into the models. Realistically, old stock price (eg: 2 years or older) may not be a good representative for stock market behavior.          
+            For sophisticated models such as gradient boosted trees and random forests, sufficient quantity and good quality of data and feature engineering reduce the errors drastically. But in this project, due to time constraint, only 245 samples (1 year of stock price) entered into the models. Realistically, old stock price (eg: 2 years or older) may not be a good representative for current stock market behavior.          
         </p>
 
        <h2 h1 style="background-color:LightGray;">What Is Moving Average Convergence Divergence (MACD)? </h2>
-        <p>MACD is a trend following momentum indicator which shows the relationship between two moving averages of DBS price. MACD is calculated by subtracting 2 period of exponential moving average (EMA). Normally, investors will use EMA period of 26 and 12 days but not limits to other number. A nine-day EMA of the MACD called the "signal line," is then plotted on top of the MACD line, which can function as a trigger for buy and sell signals. MACD indicators can be interpreted in several ways, but the more common methods are crossovers, divergences, and rapid rises/falls.
-        Because of MACD is a huge topic to cover and learn, I would like to drop MACD topic here and back to my focus point “machine learning to predict DBS stock”. Knowing that some people may have enormous appetite to learn so I’ve added a video below for those who are interested to pursue. 
+        <p>MACD is a trend following momentum indicator which shows the relationship between two moving averages of DBS price. MACD is calculated by subtracting 2 period of exponential moving average (EMA). Normally, investors will use EMA period of 26 and 12 days but not limits to other values. A nine-day EMA of the MACD called the "signal line," is then plotted on top of the MACD line, which can function as a trigger for buy and sell signals. MACD indicators can be interpreted in several ways, but the more common methods are crossovers, divergences, and rapid rises/falls.
+        Because of MACD is a huge topic to cover and lot to learn, I would like to drop MACD topic here and back to my focus point “machine learning to predict DBS stock”. Knowing that some people may have enormous appetite to learn. I’ve added a video below for those who are interested and like to know more. 
         </p>   
 
-        "<iframe width="720" height="480" src="https://www.youtube.com/embed/LHxiens0cpU?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"
+        "<iframe width="1280" height="720" src="https://www.youtube.com/embed/LHxiens0cpU?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"
 
         <h2 style="background-color:LightGray;">How to find Signal?</h2>
         <p> For simplicity, the Key input value for this project is MACD Signal since Signal line is a good indicator to signal buy or sell, 
             it may assist predictive modeling to predict a better outcome.</p>
 
         <p>To extract Signal line value, click below finance yahoo. From the graph, bottom left you should be able to see MACD (12, 26, 9). 
-            When moving the cursor along the graph, three value appearred in the box. Do record the middle orange color value and input to the prediction. 
+            When moving the cursor along the graph, three values appearr in the box. Do record the middle orange color value and input to the predictive box below. 
         </p>
 
         <p><a href="https://sg.finance.yahoo.com/chart/D05.SI/#eyJpbnRlcnZhbCI6ImRheSIsInBlcmlvZGljaXR5IjoxLCJ0aW1lVW5pdCI6bnVsbCwiY2FuZGxlV2lkdGgiOjQuNjE2ODIyNDI5OTA2NTQyLCJmbGlwcGVkIjpmYWxzZSwidm9sdW1lVW5kZXJsYXkiOnRydWUsImFkaiI6dHJ1ZSwiY3Jvc3NoYWlyIjp0cnVlLCJjaGFydFR5cGUiOiJsaW5lIiwiZXh0ZW5kZWQiOmZhbHNlLCJtYXJrZXRTZXNzaW9ucyI6e30sImFnZ3JlZ2F0aW9uVHlwZSI6Im9obGMiLCJjaGFydFNjYWxlIjoibGluZWFyIiwic3R1ZGllcyI6eyLigIx2b2wgdW5kcuKAjCI6eyJ0eXBlIjoidm9sIHVuZHIiLCJpbnB1dHMiOnsiaWQiOiLigIx2b2wgdW5kcuKAjCIsImRpc3BsYXkiOiLigIx2b2wgdW5kcuKAjCJ9LCJvdXRwdXRzIjp7IlVwIFZvbHVtZSI6IiMwMGIwNjEiLCJEb3duIFZvbHVtZSI6IiNmZjMzM2EifSwicGFuZWwiOiJjaGFydCIsInBhcmFtZXRlcnMiOnsid2lkdGhGYWN0b3IiOjAuNDUsImNoYXJ0TmFtZSI6ImNoYXJ0In19LCLigIxtYWNk4oCMICgxMiwyNiw5KSI6eyJ0eXBlIjoibWFjZCIsImlucHV0cyI6eyJGYXN0IE1BIFBlcmlvZCI6MTIsIlNsb3cgTUEgUGVyaW9kIjoyNiwiU2lnbmFsIFBlcmlvZCI6OSwiaWQiOiLigIxtYWNk4oCMICgxMiwyNiw5KSIsImRpc3BsYXkiOiLigIxtYWNk4oCMICgxMiwyNiw5KSJ9LCJvdXRwdXRzIjp7Ik1BQ0QiOiIjYWQ2ZWZmIiwiU2lnbmFsIjoiI2ZmYTMzZiIsIkluY3JlYXNpbmcgQmFyIjoiIzc5ZjRiZCIsIkRlY3JlYXNpbmcgQmFyIjoiI2ZmODA4NCJ9LCJwYW5lbCI6IuKAjG1hY2TigIwgKDEyLDI2LDkpIiwicGFyYW1ldGVycyI6eyJjaGFydE5hbWUiOiJjaGFydCJ9fX0sInBhbmVscyI6eyJjaGFydCI6eyJwZXJjZW50IjowLjgsImRpc3BsYXkiOiJEMDUuU0kiLCJjaGFydE5hbWUiOiJjaGFydCIsImluZGV4IjowLCJ5QXhpcyI6eyJuYW1lIjoiY2hhcnQiLCJwb3NpdGlvbiI6bnVsbH0sInlheGlzTEhTIjpbXSwieWF4aXNSSFMiOlsiY2hhcnQiLCLigIx2b2wgdW5kcuKAjCJdfSwi4oCMbWFjZOKAjCAoMTIsMjYsOSkiOnsicGVyY2VudCI6MC4yLCJkaXNwbGF5Ijoi4oCMbWFjZOKAjCAoMTIsMjYsOSkiLCJjaGFydE5hbWUiOiJjaGFydCIsImluZGV4IjoxLCJ5QXhpcyI6eyJuYW1lIjoi4oCMbWFjZOKAjCAoMTIsMjYsOSkiLCJwb3NpdGlvbiI6bnVsbH0sInlheGlzTEhTIjpbXSwieWF4aXNSSFMiOlsi4oCMbWFjZOKAjCAoMTIsMjYsOSkiXX19LCJzZXRTcGFuIjpudWxsLCJsaW5lV2lkdGgiOjIsInN0cmlwZWRCYWNrZ3JvdW5kIjp0cnVlLCJldmVudHMiOnRydWUsImNvbG9yIjoiIzAwODFmMiIsInN0cmlwZWRCYWNrZ3JvdWQiOnRydWUsImV2ZW50TWFwIjp7ImNvcnBvcmF0ZSI6eyJkaXZzIjp0cnVlLCJzcGxpdHMiOnRydWV9LCJzaWdEZXYiOnt9fSwicmFuZ2UiOm51bGwsInN5bWJvbHMiOlt7InN5bWJvbCI6IkQwNS5TSSIsInN5bWJvbE9iamVjdCI6eyJzeW1ib2wiOiJEMDUuU0kiLCJxdW90ZVR5cGUiOiJFUVVJVFkiLCJleGNoYW5nZVRpbWVab25lIjoiQXNpYS9TaW5nYXBvcmUifSwicGVyaW9kaWNpdHkiOjEsImludGVydmFsIjoiZGF5IiwidGltZVVuaXQiOm51bGwsInNldFNwYW4iOm51bGx9XX0-">Visit yahoo finance.com!</a></p>
@@ -46,7 +36,7 @@
         <h1 style="background-color:LightGray;">Predict DBS</h1>
         <h2 style="background-color:Red;">Declaration:</h2>
         <p> This is purely for academic purposes, and not suggesting or 
-            hinting further stock price will either in Bull or Bear market.</p>
+            hinting future stock price will either in Bull or Bear market.</p>
         <form action="/"method="post">
             <p>Please enter the Signal value to predict DBS stock : </p>
             <P><input type = "number" step="0.01" name="Signal"></P>
@@ -57,23 +47,12 @@
         <p>{{result1}}</p>
         <p>{{result2}}</p>
         <p>{{result3}}</p>
+        <img src="https://www.pandotrip.com/wp-content/uploads/2016/02/Takinoue-980x588.jpg" style="width:auto;height: 730px;">
 
 
-        <img src="https://www.pandotrip.com/wp-content/uploads/2016/02/Takinoue-980x588.jpg" style="width:auto;height: 360px;">
 
 
-        <h3>Finally, Thank you very much for visiting my webpage. Before the end, I have added a Movie clip below. Thor Ragnarok is once of my favour movie.
-            Also please click the checkboxes Like or dislike. Thank you</h3>
-            <p>The <strong>input type="checkbox"</strong> defines a checkbox:</p>
-            
-            <form action="/action_page.php">
-                <input type="checkbox" id="Like" name="Like" value="1">
-                <label for="Like"> I like it</label><br>
-                <input type="checkbox" id="Dislike" name="Dislike" value="D">
-                <label for="Dislike"> I dislike it</label><br>
-                <input type="submit" value="Submit">
-            </form> 
-
+        <h3>Finally, Thank you very much for visiting my webpage. Before leaving this webpage, I have added a Movie clip below "Thor Ragnarok". which is my favour movie.</h3>
         <iframe width="450" height="253" src="https://www.youtube.com/embed/ue80QwXMRHg?autoplay=1&mute=1">  # Add you link</iframe>
 
     </body>
